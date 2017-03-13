@@ -1,0 +1,58 @@
+{
+  "name": "essencial-webpack2-boilerplate",
+  "version": "1.0.0",
+  "description": "Minimal boilerplate with webpack2, postcss, es6 and Jest ready to start",
+  "main": "./src/index.js",
+  "repository": {
+    "url": "https://github.com/sandrina-p/essencial-webpack2-boilerplate.git",
+    "type": "git"
+  },
+  "author": "Sandrina Pereira <sandrin4pereir4@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-transform-object-rest-spread": "^6.19.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "css-loader": "^0.27.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "jest": "^17.0.3",
+    "lodash-webpack-plugin": "^0.11.2",
+    "postcss": "^5.2.16",
+    "postcss-css-variables": "^0.7.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-loader": "^1.3.3",
+    "postcss-mixins": "^5.4.1",
+    "postcss-nested": "^1.0.0",
+    "style-loader": "^0.13.2",
+    "webpack": "2.2.1",
+    "webpack-dev-server": "2.4.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "shared"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    }
+  },
+  "scripts": {
+    "build": "webpack -p",
+    "start": "webpack-dev-server --config webpack.config.js",
+    "watch": "webpack --progress -w",
+    "test": "node --harmony_proxies node_modules/jest/bin/jest.js --coverage"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
