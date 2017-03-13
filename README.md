@@ -1,21 +1,23 @@
-# CSS Mixins on JS with Unit Tests
+# Essencial wepback 2 boilerplate
 
-A working example about the article I wrote:  
-[Power-up your CSS Mixins by writing them with Javascript](https://medium.com/p/825b41728a55/).
+## What is rocking here:
+- Webpack 2 (with tree-shaking)
+- PostCss
+-- postcss-cssnext
+-- postcss-css-variables
+-- postcss-mixins [CSS mixins in JS with Unit Tests](https://medium.com/p/825b41728a55)
+- Babel (ES6 | ES2015)
+- Jest
 
-
-#### Advantages of writing CSS Mixins with JS
-- Faster compilation time
-- Prettier and advanced logic than the @if | @for | $list
-- Access to values outside the CSS files
-- Unit testing — yes, put your CSS at proof!
-
-Built with [Webpack 2](https://webpack.js.org/), [Babel](https://babeljs.io/), [PostCSS](http://postcss.org/) and [Jest](https://facebook.github.io/jest/)
+## Soon
+- JS linters
+- Style linters
+- ES6 on postcss mixins
 
 ## Install
 
 - `npm install`
-- `npm start` -
+- `npm start`
 - Go to http://localhost:3000/
 - `npm test` - run tests with Jest
 - `npm test` - create /build folder
