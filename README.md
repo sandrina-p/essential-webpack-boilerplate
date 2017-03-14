@@ -1,5 +1,7 @@
 # Essencial wepback 2 boilerplate
 
+A super minimal, basic and essencial boilerplate that I use as starter-kit for my personal projects!
+
 ## What is rocking here:
 
 
@@ -15,14 +17,18 @@
 * JS linters
 * Style linters
 * ES6 on postcss mixins
+* CSS basic theme boilerplate
+
 
 ## Install
 
 * `npm install`
 * `npm start`
 * Go to http://localhost:3000/
+
+
 * `npm test` - run tests with Jest
-* `npm test` - create /build folder
+* `npm run build` - create /build folder
 
 
 Make sure you have NodeJs and Webpack 2 installed globally.
