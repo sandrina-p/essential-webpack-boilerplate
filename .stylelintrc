@@ -1,0 +1,15 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    comment-whitespace-inside: never,
+    max-empty-lines: 2,
+    indentation: 4,
+    declaration-empty-line-before: ["never", {
+        except: ["after-comment", "after-declaration", "inside-single-line-block"]
+    }],
+    at-rule-empty-line-before: [ "always", {
+        except: ["inside-block", "blockless-after-same-name-blockless", "blockless-after-blockless", "first-nested"],
+        ignoreAtRules: ["include"],
+    }],
+  }
+}

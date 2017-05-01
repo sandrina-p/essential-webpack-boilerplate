@@ -1,22 +1,20 @@
-# Essencial wepback 2 boilerplate
+# Essential wepback2 + PostCSS boilerplate
 
-A super minimal, basic and essencial boilerplate that I use as starter-kit for my personal projects!
+A super minimal, basic and essential boilerplate that I use as starter-kit for my personal projects!
 
 ## What is rocking here:
-
-
 * Webpack 2 (with tree-shaking)
-* PostCss
+* PostCSS
+  * postcss-import
   * postcss-cssnext
-  * postcss-css-variables
-  * postcss-mixins [CSS mixins in JS with Unit Tests](https://medium.com/p/825b41728a55)
 * Babel (ES6 | ES2015)
 * Jest
-
-## Soon
 * JS linters
 * Style linters
-* ES6 on postcss mixins
+
+
+## Soon
+* Jest with ES6
 * CSS basic theme boilerplate
 
 

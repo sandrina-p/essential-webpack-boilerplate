@@ -1,13 +1,15 @@
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+/* global process, __dirname, module */
+
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
-const debug = process.env.NODE_ENV !== "production";
+const debug = process.env.NODE_ENV !== 'production';
 
 const config = {
-    context: __dirname + "/src",
+    context: __dirname + '/src',
     entry: './index.js',
     output: {
         filename: 'bundle.js',
@@ -18,14 +20,7 @@ const config = {
             {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader',
-                'exclude': /node_modules/,
-                options: {
-                    'plugins': ['lodash'],
-                    'presets': [
-                        ['es2015', { 'modules': false }] //tree-shaking
-                    ]
-                }
-
+                'exclude': /node_modules/
             },
             {
                 test: /\.css$/,
@@ -45,12 +40,12 @@ const config = {
         port: 3000
     },
     plugins: debug ? [
-            new ExtractTextPlugin("[name].css"),
-            new HtmlWebpackPlugin({template: './index.html'}),
-            new LodashModuleReplacementPlugin,
+        new ExtractTextPlugin('[name].css'),
+        new HtmlWebpackPlugin({template: './index.html'}),
+        new LodashModuleReplacementPlugin,
     ]
     : [
-        new ExtractTextPlugin("[name].css"),
+        new ExtractTextPlugin('[name].css'),
         new HtmlWebpackPlugin({template: './index.html'}),
         new LodashModuleReplacementPlugin,
         new webpack.optimize.UglifyJsPlugin({

@@ -1,13 +1,5 @@
-html {
-    font-family: sans-serif;
-    box-sizing: border-box;
-
-    & * {
-        box-sizing: inherit;
-    }
-}
+@import './html.css';
 
 .greetings {
-    @mixin padding lg;
     color: tomato;
 }
