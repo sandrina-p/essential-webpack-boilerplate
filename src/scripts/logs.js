@@ -1,7 +1,18 @@
-export function log1() {
-    console.log('first log');
+export function logWorld(name) {
+    console.log(`Wello ${name}!`);
+    return `Wello ${name}!`;
 }
 
-export function log2() {
-    console.log('second log');
+export function logSquare(value) {
+    if (typeof value === 'undefined') {
+        console.warn('No number found');
+        return false;
+    }
+    if (typeof value !== 'number') {
+        console.warn(`${value} is a ${typeof value}, not a number`);
+        return false;
+    }
+
+    console.log(`Square of ${value}:`, value * value * value);
+    return value * value * value;
 }

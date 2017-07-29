@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`logWorld() expect to return sentence with name 1`] = `"Wello Sandrina!"`;
+
+exports[`test logWorld() return greeting sentence 1`] = `"Wello Sandrina!"`;

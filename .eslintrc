@@ -31,5 +31,6 @@
     'globals': {
         'require': false,
         'global': false,
+        'module': false,
     }
 }

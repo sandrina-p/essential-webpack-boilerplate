@@ -1,34 +1,36 @@
-# Essential wepback2 + PostCSS boilerplate
+# Essential Webpack 3 + PostCSS boilerplate
 
-A super minimal, basic and essential boilerplate that I use as starter-kit for my personal projects!
+A super minimal and basic boilerplate that I use as starter-kit for my personal projects! 😎
 
 ## What is rocking here:
-* Webpack 2 (with tree-shaking)
-* PostCSS
-  * postcss-import
-  * postcss-cssnext
-* Babel (ES6 | ES2015)
-* Jest
-* JS linters
-* Style linters
+* [Webpack 3](https://webpack.js.org/guides/getting-started/)
+  * [tree-shaking](https://webpack.js.org/guides/tree-shaking/)
+* [PostCSS 6](http://postcss.org/)
+  * [Normalize](https://necolas.github.io/normalize.css/) IE10+
+  * [postcss-import](https://github.com/postcss/postcss-import)
+  * [postcss-cssnext](http://cssnext.io/)
+
+### Extras:
+* [Babel](https://babeljs.io/) - *Use next generation JavaScript, today.*
+* [Jest](https://facebook.github.io/jest/) with (Babel) - *Delightful JavaScript Testing*
+* [ESLint](http://eslint.org/) - *The pluggable linting utility for JavaScript and JSX*
+* [StyleLint](https://stylelint.io/) - *A mighty, modern CSS linter and fixer (...) in your stylesheets.*
 
 
-## Soon
-* Jest with ES6
-* CSS basic theme boilerplate
+## How to rock with it
+* `npm install` - automatically install all dependencies needed to set the project
+* `npm start` -
+* Go to http://localhost:3000/ and rock with it 💥
+* `npm test` - don't forget to test your code
+* `npm run build` - set your code all ready and minified into `/build` folder
 
 
-## Install
-
-* `npm install`
-* `npm start`
-* Go to http://localhost:3000/
+## Global Requirements
+- [NodeJs](https://nodejs.org/en/)
+- [Webpack](https://webpack.js.org/guides/getting-started/) `npm i -g webpack`
 
 
-* `npm test` - run tests with Jest
-* `npm run build` - create /build folder
+## Suggestions / Questions
+Just [create an issue](/issues) to let me know.
 
-
-Make sure you have NodeJs and Webpack 2 installed globally.
-
-Have fun!
+**Have fun!**

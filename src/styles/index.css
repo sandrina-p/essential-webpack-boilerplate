@@ -1,5 +1,9 @@
 @import './html.css';
 
+:root {
+    --clrSuper: teal;
+}
+
 .greetings {
-    color: tomato;
+    color: var(--clrSuper);
 }
