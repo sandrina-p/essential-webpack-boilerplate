@@ -1,7 +1,7 @@
 {
   "name": "essencial-webpack-boilerplate",
   "version": "1.0.0",
-  "description": "Minimal starter boilerplate with webpack, postcss, Bael and Jest ready to go",
+  "description": "Minimal starter boilerplate with webpack 3, PostCSS 6, Babel and Jest ready to go",
   "main": "./src/index.js",
   "repository": {
     "url": "https://github.com/sandrina-p/essencial-webpack-boilerplate.git",
