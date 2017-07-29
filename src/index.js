@@ -1,5 +1,5 @@
 import './styles/index.css';
 
-import { log2 } from './scripts/logs';
+import { logSquare } from './scripts/logs';
 
-log2();
+logSquare(3); // 27

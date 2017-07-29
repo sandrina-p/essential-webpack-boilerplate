@@ -1,5 +1,10 @@
 @import './html.css';
 
+:root {
+    --clrSuper: tomato;
+}
+
 .greetings {
-    color: tomato;
+    padding-left: 1rem;
+    color: var(--clrSuper);
 }
