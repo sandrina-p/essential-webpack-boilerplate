@@ -18,6 +18,7 @@ A super minimal and basic boilerplate that I use as starter-kit on my personal p
 
 
 ## How to rock
+* `git clone https://github.com/sandrina-p/essential-webpack-boilerplate.git your-project` or [download](https://github.com/sandrina-p/essential-webpack-boilerplate/archive/master.zip)
 * `npm install` - automatically install all dependencies needed to set the project
 * `npm start` -
 * Go to http://localhost:3000/ and rock with it 💥
