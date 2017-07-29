@@ -31,6 +31,6 @@ A super minimal and basic boilerplate that I use as starter-kit on my personal p
 
 
 ## Suggestions & Questions
-Just [create an issue](/issues) to let me know.
+Just [create an issue](https://github.com/sandrina-p/essential-webpack-boilerplate/issues).
 
 **Have fun!**
