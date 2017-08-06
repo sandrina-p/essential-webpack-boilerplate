@@ -25,7 +25,7 @@ const config = {
     context: projectDir + '/src',
     entry: {
         'index': './index.js',
-        // If you want to add more pages, just pass the path to your .js file 1/2
+        // If you want to add more entry points, just pass the path to your JS file
         // 'my-page': './pages/my-page/index.js',
     },
     output: {
