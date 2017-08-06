@@ -37,7 +37,8 @@ A super minimal and basic boilerplate that I use as starter-kit on my personal p
 ## How to Add Multiple files
 This boilerplate is set for only 1 page: `index.html` but is easy to add more pages. You just need to add the HTML and JS files to `config/webpack.config.js`:
 
-1. On `line 76` you have all your project Pages. Each `new HtmlWebpackPlugin` is used to create a new page.
+### Add HTML file
+- On `line 76` you have all your project Pages. Each `new HtmlWebpackPlugin` is used to create a new page.
 
 ```js
 // YOUR PROJECT PAGES
@@ -47,7 +48,7 @@ new HtmlWebpackPlugin({
 }),
 ```
 
-To add a Page, add a new instance of `HtmlWebpackPlugin` and create your HTML file. In this case the file is at `./pages/my-page.index.html`.
+To add a Page, add a new instance of `HtmlWebpackPlugin` and create your HTML file. In this case the file is at `./pages/my-page/index.html`.
 
 ```js
 new HtmlWebpackPlugin({
@@ -60,7 +61,12 @@ new HtmlWebpackPlugin({
 }),
 ```
 
-2. `chunks: ['my-page']` refers to the key of your JS file entry points. That key is on `line 26`. There you set the entry points for your project. Each entry point is a JS file. Just add a new entry-point with the same name as the `chunks` value used on the step before.
+### Add JS file
+`chunks: ['my-page']` refers to the key of your JS file entry point (`line 26`).
+
+There you set the entry points for your project. Each entry point is a JS file.
+
+Just add a new entry-point with the same name as the `chunks` value used on the step before.
 
 ```js
 entry: {
