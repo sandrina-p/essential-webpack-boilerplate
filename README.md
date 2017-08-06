@@ -62,9 +62,7 @@ new HtmlWebpackPlugin({
 ```
 
 ### Add JS file
-`chunks: ['my-page']` refers to the key of your JS file entry point (`line 26`).
-
-There you set the entry points for your project. Each entry point is a JS file.
+`chunks: ['my-page']` refers to the key of your JS file entry point (`line 26`). There you set the entry points for your project. Each entry point is a JS file.
 
 Just add a new entry-point with the same name as the `chunks` value used on the step before.
 
