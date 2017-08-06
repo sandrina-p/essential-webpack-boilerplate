@@ -75,10 +75,11 @@ entry: {
 },
 ```
 
-3. That's it! Save the file, `npm start` again and you are ready to keep rocking at **http://localhost:3001/pages/my-page/index.html**!
+That's it! Save the file, `npm start` again and keep rocking at http://localhost:3001/pages/my-page/index.html
 
----
-- You also can have HTML files that use the same JS file:
+
+### Different HTML Files, same JS file
+You also can have HTML files that use the same JS file:
 ```js
 new HtmlWebpackPlugin({
     chunks: ['index'],
