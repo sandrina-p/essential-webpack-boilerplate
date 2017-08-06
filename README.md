@@ -34,6 +34,70 @@ A super minimal and basic boilerplate that I use as starter-kit on my personal p
 - Install [Webpack](https://webpack.js.org/guides/getting-started/) `npm i -g webpack`
 
 
+## How to Add Multiple files
+Despite this boilerplate being set for only 1 page - `index.html`, I prepared things for you in case you want to add more pages.
+
+Todo do that you need to add the HTML and JS files to `config/webpack.config.js`:
+
+- On `line 76` you have all your project Pages. Each `new HtmlWebpackPlugin` is used to create a new page.
+
+```js
+// YOUR PROJECT PAGES
+new HtmlWebpackPlugin({
+    chunks: ['index'], // where it is reading the JS / CSS files from
+    template: './index.html', // location of the HTML file.
+}),
+```
+
+- To add a new page, just create a new instance of `HtmlWebpackPlugin` and on your project create your HTML file. In this case the file is at `./pages/my-page.index.html`.
+
+```js
+new HtmlWebpackPlugin({
+    chunks: ['index'],
+    template: './index.html',
+}),
+new HtmlWebpackPlugin({
+    chunks: ['my-page'],
+    template: './pages/my-page/index.html',
+}),
+```
+
+`chunks: ['my-page'],` refers to the key name of your JS file associated to your page.
+
+That key is on `line 26`. There you set the entry points for your project. Each entry point is a JS file:
+
+```js
+entry: {
+    'index': './index.js',
+    // If you want to add more pages, just pass the path to your .js file 1/2
+    // 'my-page': './pages/my-page/index.js',
+},
+```
+
+Now just add a new entry-point (key) with the same name as the `chunks` value used on the step before.
+
+```js
+entry: {
+    'index': './index.js',
+    'my-page': './pages/my-page/index.js',
+},
+```
+
+That's it. Save the file, `npm start` again and you are ready to keep rocking!
+
+- You also can have HTML files that use the same JS file as entry points.
+
+```js
+new HtmlWebpackPlugin({
+    chunks: ['index'],
+    template: './index.html',
+}),
+new HtmlWebpackPlugin({
+    chunks: ['index'], // read from the same entry point as `index.html`
+    template: './pages/my-page/about.html',
+}),
+```
+
 ## Suggestions & Questions
 Just [create an issue](https://github.com/sandrina-p/essential-webpack-boilerplate/issues).
 

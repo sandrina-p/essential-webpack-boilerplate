@@ -23,9 +23,13 @@ console.log('NODE_ENV:', process.env.NODE_ENV);
 
 const config = {
     context: projectDir + '/src',
-    entry: './index.js',
+    entry: {
+        'index': './index.js',
+        // If you want to add more pages, just pass the path to your .js file 1/2
+        // 'my-page': './pages/my-page/index.js',
+    },
     output: {
-        filename: isDev ? 'client.js' : 'client.[chunkhash].js',
+        filename: isDev ? '[name].js' : '[name].[chunkhash].js',
         path: path.resolve(projectDir, 'build'),
     },
     module: {
@@ -64,14 +68,30 @@ const config = {
         port: 3000
     },
     plugins: [
-
-        new ExtractTextPlugin('client.[contenthash:base64:5].css'),
+        new ExtractTextPlugin('[name].[contenthash:base64:5].css'),
         new CleanWebpackPlugin(['build/*.css'], {
             root: projectDir
         }), // avoid Duplicated CSS files with different hash
+
+        // YOUR PROJECT PAGES
         new HtmlWebpackPlugin({
+            chunks: ['index'],
             template: './index.html',
         }),
+
+        // If you want to add more pages, just pass the path to your .thml file
+        // new HtmlWebpackPlugin({
+        //     chunks: ['my-page'], // JS file that the page is reading the assets.
+        //     template: './pages/my-page/index.html',
+        // }),
+
+        // Multiple pages can read from the same JS entry point
+        // new HtmlWebpackPlugin({
+        //     chunks: ['index'], // read from the same entry point as `index.html`
+        //     template: './pages/my-page/about.html',
+        // }),
+
+
         new LodashModuleReplacementPlugin,
         new webpack.optimize.UglifyJsPlugin({
             mangle: true,
