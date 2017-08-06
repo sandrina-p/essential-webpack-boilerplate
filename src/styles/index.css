@@ -2,9 +2,14 @@
 
 :root {
     --clrSuper: tomato;
+    --clrChar: teal;
 }
 
 .greetings {
     padding-left: 1rem;
     color: var(--clrSuper);
+
+    &Char {
+        color: var(--clrChar);
+    }
 }

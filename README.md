@@ -12,6 +12,8 @@ A super minimal and basic boilerplate that I use as starter-kit on my personal p
 
 ### Extras
 * [Babel](https://babeljs.io/) - *Use next generation JavaScript, today.*
+* [BrowserSync](https://www.browsersync.io/) - *Time-saving synchronised browser testing.*
+  * Tunnel - Make your website online through a random Public URL
 * [Jest](https://facebook.github.io/jest/) with (Babel) - *Delightful JavaScript Testing*
 * [ESLint](http://eslint.org/) - *The pluggable linting utility for JavaScript and JSX*
 * [StyleLint](https://stylelint.io/) - *A mighty, modern CSS linter and fixer (...) in your stylesheets.*
@@ -21,8 +23,8 @@ A super minimal and basic boilerplate that I use as starter-kit on my personal p
 * `git clone https://github.com/sandrina-p/essential-webpack-boilerplate.git your-project`
 * `cd your-project` - go to `/your-project` folder
 * `npm install` - get everything to run the project
-* `npm start` - run the project
-* Go to http://localhost:3000/ and rock with it 💥
+* `npm start` - run the project... wait a few seconds
+* A tab on Chrome should open - *http://localhost:3001/* - you can rock with it 💥
 * `npm test` - don't forget to test your code
 * `npm run build` - set all the code ready and minified into `/build` folder
 
