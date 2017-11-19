@@ -1,6 +1,6 @@
 {
   "name": "essencial-webpack-boilerplate",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "description": "Minimal starter boilerplate with WebPack 3, PostCSS 6, Babel and Jest ready to go",
   "main": "./src/index.js",
   "repository": {
