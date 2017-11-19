@@ -5,7 +5,7 @@ A super minimal and basic boilerplate that I use as starter-kit on my personal p
 ## What is rocking here
 * [Webpack 3](https://webpack.js.org/guides/getting-started/)
   * [tree-shaking](https://webpack.js.org/guides/tree-shaking/)
-  * [file-loader](https://github.com/webpack-contrib/file-loader) - Supports local images and fonts loading
+  * [file-loader](https://github.com/webpack-contrib/file-loader)
 * [PostCSS 6](http://postcss.org/)
   * [Normalize](https://necolas.github.io/normalize.css/) IE10+
   * [postcss-import](https://github.com/postcss/postcss-import)
@@ -17,7 +17,7 @@ A super minimal and basic boilerplate that I use as starter-kit on my personal p
   * Tunnel - *Make your website online through a random Public URL*
 * [Jest](https://facebook.github.io/jest/) with (Babel) - *Delightful JavaScript Testing*
 * [ESLint](http://eslint.org/) - *The pluggable linting utility for JavaScript and JSX*
-* [StyleLint](https://stylelint.io/) - *A mighty, modern CSS linter and fixer (...) in your stylesheets.*
+* [StyleLint](https://stylelint.io/) - *A mighty, modern CSS linter and fixer in your stylesheets.*
 
 
 ## How to rock
