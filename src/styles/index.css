@@ -1,15 +1,31 @@
-@import './html.css';
-
 :root {
-    --clrSuper: tomato;
-    --clrChar: teal;
+  --clrSuper: #008080;
+}
+
+.container {
+  text-align: center;
+  padding-top: 1rem;
+  line-height: 1.5;
 }
 
 .greetings {
-    padding-left: 1rem;
-    color: var(--clrSuper);
+  font-family: AldoTheApache;
+  font-size: 3rem;
+  color: var(--clrSuper);
+  margin: 1rem 0;
+}
 
-    &Char {
-        color: var(--clrChar);
-    }
+.speech {
+  font-style: italic;
+}
+
+.link {
+  color: var(--clrSuper);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    opacity: 0.6;
+  }
 }

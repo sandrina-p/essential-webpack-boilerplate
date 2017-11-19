@@ -5,6 +5,7 @@ A super minimal and basic boilerplate that I use as starter-kit on my personal p
 ## What is rocking here
 * [Webpack 3](https://webpack.js.org/guides/getting-started/)
   * [tree-shaking](https://webpack.js.org/guides/tree-shaking/)
+  * [file-loader](https://github.com/webpack-contrib/file-loader) - Supports local images and fonts loading
 * [PostCSS 6](http://postcss.org/)
   * [Normalize](https://necolas.github.io/normalize.css/) IE10+
   * [postcss-import](https://github.com/postcss/postcss-import)
@@ -25,7 +26,7 @@ A super minimal and basic boilerplate that I use as starter-kit on my personal p
 * `npm install` - get everything to run the project
 * `npm start` - run the project... wait a few seconds
 * A tab on Chrome should open - **http://localhost:3001/** - you can rock with it 💥
-* `npm test` - don't forget to test your code
+* `npm test` - don't forget to test your code ⚙️
 * `npm run build` - set all the code ready and minified into `/build` folder
 
 
@@ -33,12 +34,11 @@ A super minimal and basic boilerplate that I use as starter-kit on my personal p
 - Install [NodeJs](https://nodejs.org/en/)
 - Install [Webpack](https://webpack.js.org/guides/getting-started/) `npm i -g webpack`
 
-
 ## How to Add Multiple files
 This boilerplate is set for only 1 page: `index.html` but is easy to add more pages. You just need to add the HTML and JS files to `config/webpack.config.js`:
 
 ### Add HTML file
-- On `line 76` you have all your project Pages. Each `new HtmlWebpackPlugin` is used to create a new page.
+- On `line 83` you have all your project Pages. Each `new HtmlWebpackPlugin` is used to create a new page.
 
 ```js
 // YOUR PROJECT PAGES
