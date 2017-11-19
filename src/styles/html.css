@@ -1,10 +1,10 @@
-@import 'normalize';
+@import 'normalize/index.css';
 
 html {
-    font-family: sans-serif;
-    box-sizing: border-box;
+  font-family: sans-serif;
+  box-sizing: border-box;
 
-    & * {
-        box-sizing: inherit;
-    }
+  & * {
+    box-sizing: inherit;
+  }
 }
