@@ -1,6 +1,6 @@
 {
   "name": "essencial-webpack-boilerplate",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Minimal starter boilerplate with WebPack 3, PostCSS 6, Babel and Jest ready to go",
   "main": "./src/index.js",
   "repository": {
@@ -12,9 +12,11 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js -p --optimize-minimize",
     "start": "cross-env NODE_ENV=dev webpack-dev-server --config ./config/webpack.config.js",
-    "test": "cross-env NODE_ENV=test node --harmony node_modules/jest/bin/jest.js --coverage"
+    "test": "cross-env NODE_ENV=test node --harmony_proxies node_modules/jest/bin/jest.js --coverage",
+    "test:node7": "cross-env NODE_ENV=test node --harmony node_modules/jest/bin/jest.js --coverage"
   },
   "devDependencies": {
+    "ajv-keywords": "^2.1.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-lodash": "^3.3.2",
