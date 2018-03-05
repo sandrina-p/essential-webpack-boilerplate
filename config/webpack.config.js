@@ -1,10 +1,71 @@
-/* global process, __dirname, module */
+const path = require('path');
+const projectDir = path.resolve(`${__dirname}/..`);
+
 const postcssConfig = './config/postcss/postcss.config.js';
+
+// const isDev = process.env.NODE_ENV !== 'production';
+
+module.exports = {
+  context: projectDir + '/src',
+  entry: {
+    'index': './index.js',
+    // If you want to add more entry points, just pass the path to your JS file
+    // 'my-page': './pages/my-page/index.js',
+  },
+  output: {
+    // filename: isDev ? '[name].js' : '[name].[chunkhash].js',
+    filename: '[name].js',
+    path: path.resolve(projectDir, 'build'),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          // {
+          //   loader: 'css-loader',
+          //   options: {
+          //     importLoaders: 1,
+          //     sourceMap: isDev,
+          //   },
+          // },
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: { path: postcssConfig }
+            }
+          },
+        ],
+      },
+      { test: /\.(png|jpg|gif|woff|woff2|eot|ttf|svg)$/, loader: 'file-loader?limit=100000&name=./media/[name].[ext]' },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+        }
+      }
+    ]
+  },
+
+};
+
+/*
+global process, __dirname, module
+const postcssConfig = './config/postcss/postcss.config.js';
+
+const webpack = require('webpack');
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+// const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
@@ -71,9 +132,12 @@ const config = {
   devServer: {
     contentBase: path.resolve(__dirname, 'build'),
     compress: true,
-    port: 3000
+    port: 3000,
+    hot: true,
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+
     new ExtractTextPlugin('[name].[contenthash:base64:5].css'),
     new CleanWebpackPlugin(['build/'], {
       root: projectDir
@@ -97,16 +161,15 @@ const config = {
     //     template: './pages/my-page/about.html',
     // }),
 
-    new LodashModuleReplacementPlugin,
-    new UglifyJSPlugin({
-      mangle: true,
-      compress: {
-        warnings: false,
-        drop_console: !isDev,
-        drop_debugger: !isDev,
-        screw_ie8: true,
-      },
-    }),
+    // new UglifyJSPlugin({
+    //   mangle: true,
+    //   compress: {
+    //     warnings: false,
+    //     drop_console: !isDev,
+    //     drop_debugger: !isDev,
+    //     screw_ie8: true,
+    //   },
+    // }),
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
@@ -126,3 +189,5 @@ const config = {
 };
 
 module.exports = config;
+
+*/

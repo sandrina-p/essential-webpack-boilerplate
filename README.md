@@ -1,11 +1,9 @@
 # Essential Webpack 3 + PostCSS boilerplate
 
-A super minimal and basic boilerplate that I use as starter-kit on my personal projects! 😎
+A minimal boilerplate that I use as starter-kit on some of my personal projects.
 
 ## What is rocking here
-* [Webpack 3](https://webpack.js.org/guides/getting-started/)
-  * [tree-shaking](https://webpack.js.org/guides/tree-shaking/)
-  * [file-loader](https://github.com/webpack-contrib/file-loader)
+* [Webpack 4](https://webpack.js.org/guides/getting-started/)
 * [PostCSS 6](http://postcss.org/)
   * [Normalize](https://necolas.github.io/normalize.css/) IE10+
   * [postcss-import](https://github.com/postcss/postcss-import)
